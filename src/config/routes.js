@@ -1,5 +1,5 @@
-import Home from '../pages/Home';
-import Browse from '../pages/Browse';
+import HomePage from '@/components/pages/HomePage';
+import BrowsePropertiesOrganism from '@/components/organisms/BrowsePropertiesOrganism';
 import MapView from '../pages/MapView';
 import Favorites from '../pages/Favorites';
 import PropertyDetail from '../pages/PropertyDetail';
@@ -10,8 +10,7 @@ export const routes = {
     id: 'home',
     label: 'Home',
     path: '/',
-    icon: 'Home',
-    component: Home,
+    component: HomePage,
     showInNav: false
   },
   browse: {
@@ -19,7 +18,7 @@ export const routes = {
     label: 'Browse',
     path: '/browse',
     icon: 'Search',
-    component: Browse,
+    component: BrowsePropertiesOrganism,
     showInNav: true
   },
   mapView: {

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import ApperIcon from '../components/ApperIcon';
 import PropertyCard from '../components/PropertyCard';
 import FilterSidebar from '../components/FilterSidebar';
-import { propertyService } from '../services';
+import { propertyService } from '../services/propertyService';
 
 const Browse = () => {
   const location = useLocation();
