@@ -1,0 +1,219 @@
+[
+  {
+    "id": "1",
+    "title": "Modern Downtown Loft",
+    "price": 850000,
+    "address": "123 Main Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94105",
+    "propertyType": "Condo",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "squareFeet": 1200,
+    "lotSize": null,
+    "yearBuilt": 2018,
+    "description": "Stunning modern loft in the heart of downtown with floor-to-ceiling windows, hardwood floors, and breathtaking city views. This beautifully designed space features an open-concept layout, gourmet kitchen with stainless steel appliances, and luxury finishes throughout. The master suite includes a walk-in closet and spa-like bathroom. Building amenities include a rooftop deck, fitness center, and 24-hour concierge service.",
+    "features": [
+      "Floor-to-ceiling windows",
+      "Hardwood floors",
+      "Gourmet kitchen",
+      "Stainless steel appliances",
+      "Walk-in closet",
+      "Spa-like bathroom",
+      "Open-concept layout",
+      "City views"
+    ],
+    "amenities": [
+      "Rooftop deck",
+      "Fitness center",
+      "24-hour concierge",
+      "Parking garage",
+      "Pet-friendly",
+      "In-unit laundry"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&h=600&fit=crop"
+    ],
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "listingDate": "2024-01-15T00:00:00.000Z",
+    "status": "available"
+  },
+  {
+    "id": "2",
+    "title": "Victorian Family Home",
+    "price": 1250000,
+    "address": "456 Oak Avenue",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94117",
+    "propertyType": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "squareFeet": 2400,
+    "lotSize": 5000,
+    "yearBuilt": 1895,
+    "description": "Charming Victorian home with original architectural details and modern updates. This family-friendly residence features spacious rooms, high ceilings, and beautiful moldings throughout. The updated kitchen boasts granite countertops and premium appliances. The backyard is perfect for entertaining with mature landscaping and a deck. Located in a quiet neighborhood with excellent schools nearby.",
+    "features": [
+      "Original Victorian details",
+      "High ceilings",
+      "Beautiful moldings",
+      "Updated kitchen",
+      "Granite countertops",
+      "Premium appliances",
+      "Spacious rooms",
+      "Mature landscaping"
+    ],
+    "amenities": [
+      "Private backyard",
+      "Deck for entertaining",
+      "Two-car garage",
+      "Basement storage",
+      "Quiet neighborhood",
+      "Near excellent schools"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "latitude": 37.7699,
+    "longitude": -122.4430,
+    "listingDate": "2024-01-10T00:00:00.000Z",
+    "status": "available"
+  },
+  {
+    "id": "3",
+    "title": "Luxury Waterfront Condo",
+    "price": 2100000,
+    "address": "789 Bay Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "zipCode": "94133",
+    "propertyType": "Condo",
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "squareFeet": 1800,
+    "lotSize": null,
+    "yearBuilt": 2020,
+    "description": "Exquisite waterfront condominium with panoramic bay views and luxury finishes. This corner unit features floor-to-ceiling windows, Italian marble countertops, and top-of-the-line appliances. The master suite includes a private balcony overlooking the water. Building offers world-class amenities including a spa, infinity pool, and wine cellar. Walking distance to fine dining and shopping.",
+    "features": [
+      "Panoramic bay views",
+      "Corner unit",
+      "Floor-to-ceiling windows",
+      "Italian marble countertops",
+      "Top-of-the-line appliances",
+      "Private balcony",
+      "Luxury finishes",
+      "Waterfront location"
+    ],
+    "amenities": [
+      "Spa",
+      "Infinity pool",
+      "Wine cellar",
+      "Concierge service",
+      "Valet parking",
+      "Security system",
+      "Fitness center",
+      "Private marina access"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop"
+    ],
+    "latitude": 37.8044,
+    "longitude": -122.4174,
+    "listingDate": "2024-01-20T00:00:00.000Z",
+    "status": "available"
+  },
+  {
+    "id": "4",
+    "title": "Cozy Craftsman Bungalow",
+    "price": 750000,
+    "address": "321 Pine Street",
+    "city": "Oakland",
+    "state": "CA",
+    "zipCode": "94610",
+    "propertyType": "House",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "squareFeet": 1100,
+    "lotSize": 4200,
+    "yearBuilt": 1925,
+    "description": "Delightful Craftsman bungalow with original charm and character. This home features built-in cabinetry, hardwood floors, and a cozy fireplace. The updated kitchen maintains period details while offering modern functionality. The large backyard is perfect for gardening and outdoor activities. Located in a desirable neighborhood with tree-lined streets and friendly community.",
+    "features": [
+      "Original Craftsman details",
+      "Built-in cabinetry",
+      "Hardwood floors",
+      "Cozy fireplace",
+      "Updated kitchen",
+      "Period details",
+      "Character home",
+      "Tree-lined street"
+    ],
+    "amenities": [
+      "Large backyard",
+      "Garden space",
+      "Single-car garage",
+      "Covered front porch",
+      "Friendly neighborhood",
+      "Close to parks"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&h=600&fit=crop"
+    ],
+    "latitude": 37.8044,
+    "longitude": -122.2711,
+    "listingDate": "2024-01-05T00:00:00.000Z",
+    "status": "available"
+  },
+  {
+    "id": "5",
+    "title": "Contemporary Townhouse",
+    "price": 950000,
+    "address": "654 Elm Drive",
+    "city": "Palo Alto",
+    "state": "CA",
+    "zipCode": "94301",
+    "propertyType": "Townhouse",
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "squareFeet": 1600,
+    "lotSize": 2000,
+    "yearBuilt": 2015,
+    "description": "Sleek contemporary townhouse in prime Palo Alto location. This modern home features an open floor plan, designer kitchen with quartz countertops, and seamless indoor-outdoor living. The master suite includes a luxurious en-suite bathroom and walk-in closet. Private patio and two-car garage. Walking distance to downtown shops and restaurants. Excellent schools nearby.",
+    "features": [
+      "Open floor plan",
+      "Designer kitchen",
+      "Quartz countertops",
+      "Indoor-outdoor living",
+      "Luxurious en-suite",
+      "Walk-in closet",
+      "Contemporary design",
+      "Prime location"
+    ],
+    "amenities": [
+      "Private patio",
+      "Two-car garage",
+      "Modern appliances",
+      "Central air conditioning",
+      "Walking distance to downtown",
+      "Excellent schools"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600563438938-a42d6c2a34e4?w=800&h=600&fit=crop"
+    ],
+    "latitude": 37.4419,
+    "longitude": -122.1430,
+    "listingDate": "2024-01-25T00:00:00.000Z",
+    "status": "available"
+  }
+]
