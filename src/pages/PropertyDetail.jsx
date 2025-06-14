@@ -23,10 +23,9 @@ const PropertyDetail = () => {
       try {
         const data = await propertyService.getById(id);
         setProperty(data);
-        
-        // Check if property is favorited
-        const savedProperties = await savedPropertyService.getAll();
-        setIsFavorite(savedProperties.some(saved => saved.propertyId === id));
+// Check if property is favorited
+        const isFavorited = await savedPropertyService.isSaved(id);
+        setIsFavorite(isFavorited);
       } catch (err) {
         setError(err.message || 'Property not found');
       } finally {
@@ -44,11 +43,11 @@ const PropertyDetail = () => {
       if (isFavorite) {
         await savedPropertyService.delete(property.id);
         setIsFavorite(false);
-        toast.success('Removed from favorites');
+toast.success('Removed from favorites');
       } else {
         await savedPropertyService.create({
-          propertyId: property.id,
-          savedDate: new Date().toISOString(),
+          property_id: property.Id,
+          saved_date: new Date().toISOString(),
           notes: ''
         });
         setIsFavorite(true);
@@ -232,12 +231,12 @@ const PropertyDetail = () => {
                     <h1 className="font-display text-4xl font-bold text-gray-900 mb-2">
                       {property.title}
                     </h1>
-                    <p className="text-lg text-gray-600">{property.address}</p>
-                    <p className="text-gray-500">{property.city}, {property.state} {property.zipCode}</p>
+<p className="text-lg text-gray-600">{property.address}</p>
+                    <p className="text-gray-500">{property.city}, {property.state} {property.zip_code}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-3xl font-bold text-secondary">{formatPrice(property.price)}</p>
-                    <p className="text-sm text-gray-500">Listed {new Date(property.listingDate).toLocaleDateString()}</p>
+                    <p className="text-sm text-gray-500">Listed {new Date(property.listing_date).toLocaleDateString()}</p>
                   </div>
                 </div>
 
@@ -253,14 +252,14 @@ const PropertyDetail = () => {
                     <span className="font-semibold">{property.bathrooms}</span>
                     <span className="text-gray-600">Bathrooms</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                     <ApperIcon name="Square" size={18} className="text-gray-500" />
-                    <span className="font-semibold">{formatSquareFeet(property.squareFeet)}</span>
+                    <span className="font-semibold">{formatSquareFeet(property.square_feet)}</span>
                     <span className="text-gray-600">Sq Ft</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                     <ApperIcon name="Calendar" size={18} className="text-gray-500" />
-                    <span className="font-semibold">{property.yearBuilt}</span>
+                    <span className="font-semibold">{property.year_built}</span>
                     <span className="text-gray-600">Built</span>
                   </div>
                 </div>
@@ -354,19 +353,19 @@ const PropertyDetail = () => {
               <div className="bg-white rounded-lg shadow-card p-6">
                 <h3 className="font-semibold text-lg text-gray-900 mb-4">Property Details</h3>
                 <div className="space-y-3 text-sm">
-                  <div className="flex justify-between py-2 border-b border-gray-100">
+<div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Property Type</span>
-                    <span className="font-medium text-gray-900">{property.propertyType}</span>
+                    <span className="font-medium text-gray-900">{property.property_type}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Lot Size</span>
                     <span className="font-medium text-gray-900">
-                      {property.lotSize ? `${formatSquareFeet(property.lotSize)} sq ft` : 'N/A'}
+                      {property.lot_size ? `${formatSquareFeet(property.lot_size)} sq ft` : 'N/A'}
                     </span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Year Built</span>
-                    <span className="font-medium text-gray-900">{property.yearBuilt}</span>
+                    <span className="font-medium text-gray-900">{property.year_built}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-gray-100">
                     <span className="text-gray-600">Status</span>
@@ -376,10 +375,10 @@ const PropertyDetail = () => {
                       {property.status}
                     </span>
                   </div>
-                  <div className="flex justify-between py-2">
+<div className="flex justify-between py-2">
                     <span className="text-gray-600">Price per Sq Ft</span>
                     <span className="font-medium text-gray-900">
-                      {formatPrice(Math.round(property.price / property.squareFeet))}
+                      {formatPrice(Math.round(property.price / property.square_feet))}
                     </span>
                   </div>
                 </div>

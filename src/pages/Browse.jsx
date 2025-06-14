@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import ApperIcon from '../components/ApperIcon';
 import PropertyCard from '../components/PropertyCard';
 import FilterSidebar from '../components/FilterSidebar';
-import { propertyService } from '../services/propertyService';
+import { propertyService } from '../services';
 
 const Browse = () => {
   const location = useLocation();
@@ -64,10 +64,10 @@ const Browse = () => {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(property => 
-        property.title.toLowerCase().includes(query) ||
+property.title.toLowerCase().includes(query) ||
         property.address.toLowerCase().includes(query) ||
         property.city.toLowerCase().includes(query) ||
-        property.zipCode.includes(query)
+        property.zip_code.includes(query)
       );
     }
 
@@ -79,9 +79,9 @@ const Browse = () => {
       filtered = filtered.filter(property => property.price <= parseInt(activeFilters.priceMax));
     }
 
-    // Property type filter
+// Property type filter
     if (activeFilters.propertyTypes.length > 0) {
-      filtered = filtered.filter(property => activeFilters.propertyTypes.includes(property.propertyType));
+      filtered = filtered.filter(property => activeFilters.propertyTypes.includes(property.property_type));
     }
 
     // Bedrooms filter
@@ -94,9 +94,9 @@ const Browse = () => {
       filtered = filtered.filter(property => property.bathrooms >= parseInt(activeFilters.bathroomsMin));
     }
 
-    // Square feet filter
+// Square feet filter
     if (activeFilters.squareFeetMin) {
-      filtered = filtered.filter(property => property.squareFeet >= parseInt(activeFilters.squareFeetMin));
+      filtered = filtered.filter(property => property.square_feet >= parseInt(activeFilters.squareFeetMin));
     }
 
     // Sort results
@@ -110,11 +110,11 @@ const Browse = () => {
       case 'beds':
         filtered.sort((a, b) => b.bedrooms - a.bedrooms);
         break;
-      case 'size':
-        filtered.sort((a, b) => b.squareFeet - a.squareFeet);
+case 'size':
+        filtered.sort((a, b) => b.square_feet - a.square_feet);
         break;
       default: // newest
-        filtered.sort((a, b) => new Date(b.listingDate) - new Date(a.listingDate));
+        filtered.sort((a, b) => new Date(b.listing_date) - new Date(a.listing_date));
     }
 
     setFilteredProperties(filtered);
@@ -400,9 +400,9 @@ const Browse = () => {
                 ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3' 
                 : 'grid-cols-1'
             }`}>
-              {filteredProperties.map((property, index) => (
+{filteredProperties.map((property, index) => (
                 <motion.div
-                  key={property.id}
+                  key={property.Id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}

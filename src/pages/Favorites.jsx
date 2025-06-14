@@ -15,14 +15,14 @@ const Favorites = () => {
     const loadFavorites = async () => {
       setLoading(true);
       setError(null);
-      try {
+try {
         const savedItems = await savedPropertyService.getAll();
         const allProperties = await propertyService.getAll();
         
         // Get full property data for saved items
         const favorites = savedItems.map(saved => {
-          const property = allProperties.find(p => p.id === saved.propertyId);
-          return property ? { ...property, savedDate: saved.savedDate, notes: saved.notes } : null;
+          const property = allProperties.find(p => p.Id === saved.property_id);
+          return property ? { ...property, saved_date: saved.saved_date, notes: saved.notes } : null;
         }).filter(Boolean);
         
         setFavoriteProperties(favorites);
@@ -37,20 +37,20 @@ const Favorites = () => {
     loadFavorites();
   }, []);
 
-  const handleRemoveFromFavorites = async (propertyId) => {
+const handleRemoveFromFavorites = async (propertyId) => {
     try {
       await savedPropertyService.delete(propertyId);
-      setFavoriteProperties(prev => prev.filter(p => p.id !== propertyId));
+      setFavoriteProperties(prev => prev.filter(p => p.Id !== propertyId));
       toast.success('Property removed from favorites');
     } catch (err) {
       toast.error('Failed to remove from favorites');
     }
   };
 
-  const handleClearAllFavorites = async () => {
+const handleClearAllFavorites = async () => {
     try {
       for (const property of favoriteProperties) {
-        await savedPropertyService.delete(property.id);
+        await savedPropertyService.delete(property.Id);
       }
       setFavoriteProperties([]);
       toast.success('All favorites cleared');
@@ -205,9 +205,9 @@ const Favorites = () => {
               : 'grid-cols-1'
           }`}>
             <AnimatePresence>
-              {favoriteProperties.map((property, index) => (
+{favoriteProperties.map((property, index) => (
                 <motion.div
-                  key={property.id}
+                  key={property.Id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
@@ -219,12 +219,12 @@ const Favorites = () => {
                       property={property} 
                       viewMode={viewMode}
                       isFavorite={true}
-                      onToggleFavorite={() => handleRemoveFromFavorites(property.id)}
+                      onToggleFavorite={() => handleRemoveFromFavorites(property.Id)}
                     />
                     
                     {/* Saved Date Badge */}
                     <div className="absolute top-2 left-2 bg-accent text-white text-xs px-2 py-1 rounded-full">
-                      Saved {new Date(property.savedDate).toLocaleDateString()}
+                      Saved {new Date(property.saved_date).toLocaleDateString()}
                     </div>
                   </div>
                 </motion.div>
